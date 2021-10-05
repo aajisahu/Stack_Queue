@@ -3,7 +3,7 @@ package com.StackQueue;
 public class DataStructureStack<T> {
 
 
-    //creating linked list node
+	 //creating linked list node
 
     private class Node {
         T data;
@@ -23,13 +23,32 @@ public class DataStructureStack<T> {
     public void push(T x) {
         //create temp node and give top value
         Node temp = new Node();
-        if (temp == null) {
+        if (temp == null)
 			System.out.println("stack overflow");
-        }
-        else {
+		else {
         temp.data = x;
         temp.link = topper;
         topper = temp;
+        }
+    }
+
+    //pop method to pop the stack value
+    public void pop(){
+        if(topper == null){
+            System.out.println("stack underflow");
+        }
+        else
+            topper = (topper).link;
+    }
+    //peek method give topper value
+
+    public T peek(){
+        if(topper != null){
+            return topper.data;
+        }
+        else{
+            System.out.println("stack underflow");
+            return null;
         }
     }
 
