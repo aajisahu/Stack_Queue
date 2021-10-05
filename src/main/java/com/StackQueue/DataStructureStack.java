@@ -3,7 +3,7 @@ package com.StackQueue;
 public class DataStructureStack<T> {
 
 
-	 //creating linked list node
+    //creating linked list node
 
     private class Node {
         T data;
@@ -24,8 +24,8 @@ public class DataStructureStack<T> {
         //create temp node and give top value
         Node temp = new Node();
         if (temp == null)
-			System.out.println("stack overflow");
-		else {
+            System.out.println("stack overflow");
+        else {
         temp.data = x;
         temp.link = topper;
         topper = temp;
